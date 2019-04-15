@@ -1,21 +1,22 @@
 package com.example.tp.kotlinpostgresdemo.model
 
+import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 
-
+@Entity
 data class EventLocation(@Id @GeneratedValue(strategy = GenerationType.AUTO)
-                         val locationId: Long,
-                         val locationName: String,
-                         val locationStreet: String,
-                         val locationStreet2: String,
-                         val locationCity: String,
-                         val locationState: String,
-                         val locationPostalCode: String,
-                         val locationCountry: String,
-                         val locationCoordinates: String,
-                         val locationContactName: String,
-                         val locationContactPhone: String,
-                         val locationContactEmail: String,
-                         val locationComments: String)
+                         var locationId: Long,
+                         var locationName: String ?= "",
+                         var locationStreet: String ?= "",
+                         var locationStreet2: String ?= "",
+                         var locationCity: String ?= "",
+                         var locationState: String ?= "",
+                         var locationPostalCode: String ?= "",
+                         var locationCountry: String ?= "",
+                         var locationCoordinates: String ?= "",
+                         var locationContactName: String ?= "",
+                         var locationContactPhone: String ?= "",
+                         var locationContactEmail: String ?= "",
+                         var locationComments: String ?= "")

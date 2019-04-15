@@ -5,7 +5,7 @@
     <link href="https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/4.3.1/css/bootstrap.min.css"
           th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"
           rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="css/NewEvent.css">
+    <link rel="stylesheet" type="text/css" href="css/Organizer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.3.1-2/jquery.min.js"
@@ -59,13 +59,14 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
+
 <div class="d-flex">
-    <form class="new-event-form" method="POST"
-               action="" th:object="${event}">
+    <form class="new-organizer-form" method="POST"
+          action="" th:object="${organizer}">
         <div class="form-group">
-            <label for="eventName">Event Name</label>
-            <input type="text" class="form-control" id="eventName"
-                   th:field="*{eventName}" placeholder="Enter Event Name">
+            <label for="organizerFirstName">First Name</label>
+            <input type="text" class="form-control" id="organizerFirstName"
+                   th:field="*{organizerFirstName}" placeholder="Enter Event Name">
         </div>
         <div class="row">
             <div class="col">
